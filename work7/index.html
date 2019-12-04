@@ -1,237 +1,308 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
 		<style>
-			.cotainter{
-			    display: flex;
-				flex-direction: row;
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.yi {
+				width: 1000px;
+				height: 120px;
+				display: flex;
+				flex-wrap: nowrap;
+			}
+			.pic {
+				width: 406px;
+				height: 90px;
+				float: left;
+				display: flex;
+				flex-wrap: nowrap;
+			}
+			
+			.title {
+				float: left;
+				display: flex;
+				flex-wrap: nowrap;
+			}
+			.aa{
+				float: left;
+			}
+			.intr{
+				margin-top: 40px;
+				margin-left: 50px;
+			}
+			.a{
+				display: -webkit-flex;
+				-webkit-align-content: center;
+				align-content: center;
 				margin: 0 auto;
+				width: 100%;
+				display: flex;
+				flex-direction: row;
 				flex-wrap: wrap;
-				width: 1300px;
+				align-content: center;
+				justify-content: space-around;
 			}
-			.item{
-				 border: 1px solid #ccc;
-				 float: left;
-				 margin-left: 50px;
-				 
+			
+			@media (min-width:190px) {
+				.f div {
+					flex-basis: 100%;
+				}
 			}
-			.item:hover{
-				 border: 3px solid crimson;
-				 
-			    }
-			*{
-				margin: 0px;
+			
+			@media (min-width:400px) {
+				.f div {
+					flex-basis: 49%;
+				}
+				.yi div{
+					flex-basis: 49%;
+				}
+			}
+			
+			@media (min-width:600px) {
+				.f div {
+					flex-basis: 32%;
+				}
+			}
+			
+			@media (min-width:800px) {
+				.f div {
+					flex-basis: 24%;
+				}
+			}
+			
+			@media (min-width:1080px) {
+				* {
+					width: 1080px;
+					margin: 0 auto;
+				}
+				.f div {
+					flex-basis: 18%;
+				}
+			}
+			
+			.f {
+				display: flex;
+				flex-direction: column;
+				width: 300px;
+				overflow: hidden;
+				margin-top: 50px;
+			}
+			
+			.pro {
+				width: 255px;
+			}
+			.logo {
+				width: 366px;
+				margin-top: 10px;
+			}
+			.pro:hover {
+				border: solid #FF0036;
+			}
+			.prince {
+				color:#FF0036;
+				font-size: 25px;
+				font-weight: 300;
+				font-family: arial;
+			}
+			.a1 {
+				text-decoration: none;
+				font-family: "微软雅黑";
+				font-size: 19px;
+				color: #000000;
+			}
+			
+			.p2 a:hover {
+				color: #FF0036;
+				text-decoration: underline
+			}
+			
+			.a2 {
+				font-size: 17px;
+				color: #FF0036;
+				font-family: "微软雅黑";
+			}
+			
+			.p3 a:hover {
+				color: #FF0036;
+			}
+			
+			.search {
+				width: 670px;
+				height: 40px;
+				display: flex;
+				flex-wrap:nowrap;
+			}
+			#myInput {
+				background-image: url('https://static.runoob.com/images/mix/searchicon.png');
+				/* 搜索按钮 */
+				background-position: 10px 6px;
+				/* 定位搜索按钮 */
+				background-repeat: no-repeat;
+				/* 不重复图片 */
+				width: 200px;
+				font-size: 16px;
+				padding: 6px 20px 6px 40px;
+				border: 2px solid #FF0036;
+				float: left;
+			}
+			#myTable {
+				border-collapse: collapse;
+				width: 100px;
+				border: 2px solid #FF0036;
+				font-size: 18px;
+			}
+			
+			#myTable th,
+			#myTable td {
+				padding: 4px;
+				background: #FF0036;
+			}
+			
+			#myTable tr {
+				/* 表格添加边框 */
+				border-bottom: 2px solid #FF0036;
+			}
+			
+			#myTable tr.header,
+			#myTable tr:hover {
+				/* 表头及鼠标移动过 tr 时添加背景 */
+				background-color: #FF0036;
+				border: 4px solid white;
+			}
+			
+			a.if {
+				text-decoration: none;
 			}
 			a{color: #000000;text-decoration: none;}
 			a:hover{color:brown;}
-			.1{
-				color: #CCCCCC;
-			}
-			@media (min-width: 500px) 
-				
-			
-			{
-				.item{
-					flex-basis: 50%;
-					
-					flex-wrap:nowrap;
-				}
-			}
-			@media (min-width: 880px)
-				
-			
-			{
-				.item{
-					flex-basis: 20%;
-					
-					flex-wrap:nowrap;
-				}
-			}
-		
-			#sougou {
-				width: 600px;
-				height: 10px;
-				float: left;
-			}
-			
-			#SEARCH {
-				position: relative;
-				height: 30px;
-				margin: 17px 0px 0 184px;
-				border: 3px solid red;
-				background-color: #f3f6f8;
+			.b{
+				width: 306px;
+				height: 80px;
+				float: right;
+				display: flex;
+				flex-wrap: nowrap;
 				
 			}
-			
-			#search {
-				position: relative;
-				height: 15px;
-				line-height: 1px;
-				margin: 0 0 0 1px;
-				border: none;
-				background-color: #f3f6f8;
-				width: 25px;
+			.c {
+				width: 206px;
 			}
-			
-			#searchBtn {
-				position: absolute;
-				top: -1px;
-				right: -1px;
-				background: none;
-				border: none;
-				height: 33px;
-				line-height: 3px;
-				padding: 0 20px;
-				color: #FFF;
-				background-color:red;
-				
-				font-size: 16px;
-				cursor: pointer;
-				margin: 0;
-			}
-			.zong
-			{
-			position: relative;
-			height: 100px;
-			margin-top: 30px;
-			margin-bottom: 0px;
-			align-content: center;
-			flex-wrap: nowrap;
-			
-			}
-			*{
-				margin: 0;
-			}
-			.1{
-				float: left;
-			}
-			.zong1{
-				float: left;
-				margin-left: 70px;
-			}
-			
 		</style>
 	</head>
+
 	<body>
-	<div class="zong">
-		<div class="zong1">
-		<img src="img/tianmao12.png" width="150px"/></div>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <div id="sougou">
-				<div id="SEARCH">
-					<span style="margin:0px 15px;">天猫</span>
-					<input id="search" autocomplete="off" />
-					<button id="searchBtn" type="submit">搜索</button>
+		<div class="yi">
+			<div class="pic">
+				<img class="logo" src="img/tianmao12.png" width="50px" />
+			</div>
+			<div class="intr">
+				<div class="search aa">
+					<span class="kuang">
+					<input type="text" id="myInput" onkeyup="myFunction()" placeholder="tianmao" />
+					<table id="myTable">
+						
+					</table>
+				</span>
 				</div>
-				
+				<div class="b">
+				<img class="c" src="img/tianmao16.png"  />
 			</div>
-		<img src="img/tianmao16.png" width="150px" style="margin-right: 10px;"/>		
-	</div>
-		<div class="cotainter">
-			<div class="item"><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-				<img src="img/tianmao1.png" width="200px"/></a>
-				<h5><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-				花花公子韩版冬季黑色平底男鞋 </a></h5>
-				<h5><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
-					&nbsp;四杰鞋类专营店
-				</h5>
-				<img src="img/tianmao7.png" width="190px" />
 			</div>
-		<div class="item"><a class="jieshao" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-			<img src="img/tianmao3.png" width="200px"/></a>
-			<h5><a  href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-				人本侧拉链加绒保暖防滑套脚棉麻靴</a></h5>
-				<h5><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
-					&nbsp;匡课鞋类专卖店
-				</h5>
-				<img src="img/tianmao6.png" width="190px" />
+		</div>
+		</div>
+		<div class="a">
+			<div class="f">
+				<div class="div3"><a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.13.17df5b66CdDYm0&id=542490611512&cm_id=140105335569ed55e27b&abbucket=2&skuId=3519006093631">
+					<img class="pro" src="img/tianmao13.png" /></a></div>
+				<div class="div4">
+					<h6><a class="a1" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
+				环球ins运动鞋子厚底小白潮鞋 </a></h6>
+					<a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
+					&nbsp;睿莎鞋类专营店</a>
+			      <br />   
+				<img class="pro" src="img/tianmao4.png" />
+					<p class="p3">
+						<a href="" class="a2">立即购买</a>
+					</p>
+				</div>
 			</div>
-			<div class="item"><a class="jieshao" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-			<img src="img/tianmao8.png" width="200px"/></a>
-			<h5><a href="">
-				卓诗尼过膝高跟加绒长靴</a></h5>
-				<h5><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
+			<div class="f">
+				<div class="div3"><img class="pro" src="img/tianmao1.png" alt="" /></div>
+				<div class="div4">
+					<h6><a class="a1" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
+				花花公子韩版冬季黑色平底男鞋 </a></h6>
+					<a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
+					&nbsp;四杰鞋类专营店</a>
+			      <br />   
+				<img class="pro" src="img/tianmao4.png" />
+					<p class="p3">
+						<a href="" class="a2">立即购买</a>
+					</p>
+				</div>
+			</div>
+			<div class="f">
+				<div class="div3"><img class="pro" src="img/tianmao17.png" alt="" /></div>
+				<div class="div4">
+					<h6><a class="a1" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
+				森马潮韩版加绒保暖白色高帮鞋 </a></h6>
+					<a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
+					&nbsp;senma鞋类旗舰店</a>
+			      <br />   
+				<img class="pro" src="img/tianmao4.png" />
+					<p class="p3">
+						<a href="" class="a2">立即购买</a>
+					</p>
+				</div>
+			</div>
+			<div class="f">
+				<div class="div3"><img class="pro" src="img/tianmao10.png" alt="" /></div>
+				<div class="div4">
+					<h6><a class="a1" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
+				人本侧拉链加绒保暖防滑套脚棉麻靴 </a></h6>
+					<a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
+					&nbsp;匡课鞋类专卖店</a>
+			      <br />   
+				<img class="pro" src="img/tianmao4.png" />
+					<p class="p3">
+						<a href="" class="a2">立即购买</a>
+					</p>
+				</div>
+			</div>
+			<div class="f">
+				<div class="div3"><img class="pro" src="img/tianmao8.png" alt="" /></div>
+				<div class="div4">
+					<h6><a class="a1" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
+				卓诗尼过膝高跟加绒长靴</a></h6>
+					<a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
 					&nbsp;卓诗尼海之涵专卖店</a>
-				</h5>
-				<img src="img/tianmao6.png" width="190px" />
-			</div>
-			<div class="item"><a class="jieshao" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-			
-			<img src="img/tianmao9.png" width="200px"/></a>
-			<h5><a  href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-				森马潮韩版加绒保暖白色高帮鞋</a></h5>
-				<h5><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
-					&nbsp;senma鞋类旗舰店
-				</h5>
-				<img src="img/tianmao6.png" width="190px" />
+			      <br />   
+				<img class="pro" src="img/tianmao4.png" />
+					<p class="p3">
+						<a href="" class="a2">立即购买</a>
+					</p>
+				</div>
 			</div>
 			
-			<div class="item"><a class="jieshao" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
 			
-			<img src="img/tianmao10.png" width="200px"/></a>
-			<h5><a  href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-				卓诗尼过膝高跟加绒长靴</a></h5>
-				<h5><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
-					&nbsp;卓诗尼海之涵专卖店
-				</h5>
-				<img src="img/tianmao6.png" width="190px" />
+			<div class="f">
+				<div class="div3"><img class="pro" src="img/tianmao2.png" alt="" /></div>
+				<div class="div4">
+					<h6><a class="a1" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
+				人本侧拉链加绒保暖防滑套脚棉麻靴 </a></h6>
+					<a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
+					&nbsp;匡课鞋类专卖店</a>
+			      <br />   
+				<img class="pro" src="img/tianmao4.png" />
+					<p class="p3">
+						<a href="" class="a2">立即购买</a>
+					</p>
+				</div>
 			</div>
-			<div class="item"><a class="jieshao" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-			<img src="img/tianmao8.png" width="200px"/></a>
-			<h5><a  href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-				卓诗尼过膝高跟加绒长靴</a></h5>
-				<h5><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
-					&nbsp;卓诗尼海之涵专卖店
-				</h5>
-				<img src="img/tianmao6.png" width="190px" />
-			</div>
-			<div class="item"><a class="jieshao" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-			
-			<img src="img/tianmao17.png" width="210px"/></a>
-			<h5><a  href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-				环球ins运动鞋子厚底小白潮鞋 </a></h5>
-				<h5><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
-					&nbsp;睿莎鞋类专营店
-				</h5>
-				<img src="img/tianmao6.png" width="190px" />
-			</div>
-		
-		
-		<div class="item"><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-				<img src="img/tianmao1.png" width="200px"/></a>
-				<h5><a  href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-				花花公子韩版冬季黑色平底男鞋 </a></h5>
-				<h5><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
-					&nbsp;四杰鞋类专营店
-				</h5>
-				<img src="img/tianmao7.png" width="190px" />
-			</div>
-		<div class="item"><a class="jieshao" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-			<img src="img/tianmao3.png" width="180px"/></a>
-			<h5><a  href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-				人本侧拉链加绒保暖防滑套脚棉麻靴</a></h5>
-				<h5><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
-					&nbsp;匡课鞋类专卖店
-				</h5>
-				<img src="img/tianmao6.png" width="190px" />
-			</div>
-		
-		
-		<div class="item"><a class="jieshao" href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-			
-			<img src="img/tianmao13.png" width="200px"/></a>
-			<h5><a  href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton">
-				环球ins运动鞋子厚底小白潮鞋 </a></h5>
-				<h5><a href="https://list.tmall.com/search_product.htm?q=%D0%AC&type=p&vmarket=&spm=a211oj.13451669.a2227oh.d100&from=..pc_1_searchbutton" >
-					&nbsp;睿莎鞋类专营店
-				</h5>
-				<img src="img/tianmao6.png" width="190px" />
-			</div>
-		
-		
-		</div>	
-	</div></body>
+		</div>
+	</body>
+
 </html>
